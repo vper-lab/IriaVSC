@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Iria Gastrobar - Premium Edition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400;600&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0f0f0f;
+            --brand-red: #c41212;
+            --brand-red-dark: #7a0b0b;
+            --text-white: #f5f5f5;
+            --text-gray: #a0a0a0;
+        }
+
+        body {
+            background-color: #1a1a1a;
+            color: var(--text-white);
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .menu-container {
+            background-color: var(--bg-dark);
+            width: 100%;
+            max-width: 900px;
+            padding: 60px 40px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            position: relative;
+            border: 1px solid #222;
+        }
+
+        /* Título Principal */
+        .header {
+            margin-bottom: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo-header {
+            display: block;
+            max-width: 180px;
+            width: 100%;
+            height: auto;
+            margin: 0 auto 25px;
+            filter: drop-shadow(0 5px 10px rgba(0,0,0,0.3));
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 72px;
+            line-height: 0.9;
+            color: var(--text-white);
+            letter-spacing: -2px;
+        }
+
+        .sub-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: 300;
+            letter-spacing: 8px;
+            color: var(--brand-red);
+            margin-top: -5px;
+        }
+
+        /* Estilo de Secciones */
+        .section-box {
+            border: 1px solid var(--brand-red-dark);
+            padding: 25px;
+            margin-bottom: 30px;
+            position: relative;
+            background: linear-gradient(145deg, #121212 0%, #0a0a0a 100%);
+        }
+
+        .section-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 32px;
+            color: var(--brand-red);
+            margin-bottom: 20px;
+            display: inline-block;
+            background-color: var(--bg-dark);
+            padding: 0 15px;
+            position: absolute;
+            top: -22px;
+            left: 20px;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 12px;
+        }
+
+        .item-info {
+            flex: 1;
+            padding-right: 15px;
+        }
+
+        .item-name {
+            font-weight: 600;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .item-desc {
+            font-size: 12px;
+            color: var(--text-gray);
+            margin-top: 2px;
+            font-weight: 300;
+        }
+
+        .item-price {
+            font-weight: 600;
+            color: var(--text-white);
+            white-space: nowrap;
+        }
+
+        /* Imagen Decorativa */
+        .promo-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border: 1px solid var(--brand-red-dark);
+            margin-bottom: 30px;
+            filter: grayscale(30%) brightness(80%);
+        }
+
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            font-size: 11px;
+            color: var(--text-gray);
+            letter-spacing: 1px;
+        }
+
+        .footer b {
+            color: var(--brand-red);
+        }
+
+        /* Botón para portabilidad */
+        .copy-hint {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--brand-red);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 12px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            z-index: 100;
+        }
+
+        @media (max-width: 768px) {
+            .grid-cols-2 {
+                grid-template-columns: 1fr;
+            }
+            .main-title { font-size: 50px; }
+            .menu-container { padding: 30px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu-container">
+        <!-- Header -->
+        <header class="header">
+            <img src="logo-iria.png" alt="Logo Iria Gastrobar" class="logo-header">
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Columna Izquierda -->
+            <div class="column">
+                
+                <section class="section-box">
+                    <h2 class="section-title">Tostas</h2>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <div class="item-name">Jamón ibérico con tomate</div>
+                        </div>
+                        <div class="item-price">9 €</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <div class="item-name">Bacalao “Daniel” y huevo de corral</div>
+                        </div>
+                        <div class="item-price">9 €</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <div class="item-name">Mexicana</div>
+                            <div class="item-desc">Guacamole, mezclum, cebolla morada, langostinos y salsa chipotle</div>
+                        </div>
+                        <div class="item-price">9 €</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <div class="item-name">Solomillo asado</div>
+                            <div class="item-desc">Con crema de hinojo, mezclum, tomate cherry y pepinillos agridulces (fría)</div>
+                        </div>
+                        <div class="item-price">9 €</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <div class="item-name">Salmón ahumado y queso brie</div>
+                        </div>
+                        <div class="item-price">9 €</div>
+                    </div>
+                </section>
+
+                <section class="section-box">
+                    <h2 class="section-title">De Picoteo</h2>
+                    <div class="menu-item">
+                        <div class="item-name">Patatas bravas con torreznos</div>
+                        <div class="item-price">9 €</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Croquetas cremosas (jamón o queso)</div>
+                        <div class="item-price">9 €</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Fingers de pollo caseros</div>
+                        <div class="item-price">10 €</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Jamón ibérico con pan tumaca</div>
+                        <div class="item-price">17 €</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Alcachofas confitadas</div>
+                        <div class="item-price">5 €/ud</div>
+                    </div>
+                </section>
+
+                <img src=""file:///C:\Plato_elegante.png" alt="Gastrobar food" class="promo-img">
+
+                <section class="section-box">
+                    <h2 class="section-title">Hamburguesas</h2>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <div class="item-name">Clásica</div>
+                            <div class="item-desc">Carne de ternera, queso, mezclum, tomate y cebolla</div>
+                        </div>
+                        <div class="item-price">10 €</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <div class="item-name">De la casa</div>
+                            <div class="item-desc">Ternera, queso, mezclum, bacon, huevo frito y setas boletus</div>
+                        </div>
+                        <div class="item-price">13 €</div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Columna Derecha -->
+            <div class="column">
+                
+                <section class="section-box">
+                    <h2 class="section-title">Ensaladas</h2>
+                    <div class="menu-item">
+                        <div class="item-name">Tomate, ventresca y cebolla morada</div>
+                        <div class="item-price">12 €</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Aguacate, salmón y mezclum</div>
+                        <div class="item-price">13 €</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Ensaladilla casera Oliver</div>
+                        <div class="item-price">10 €</div>
+                    </div>
+                </section>
+
+                <section class="section-box">
+                    <h2 class="section-title">Pescados y Mariscos</h2>
+                    <div class="menu-item">
+                        <div class="item-name">Mejillones de roca (Marinera/Vapor)</div>
+                        <div class="item-price">12 €</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <div class="item-name">Chipirones de anzuelo</div>
+                            <div class="item-desc">En cama de cebolla, pimientos y salsa de ajo</div>
+                        </div>
+                        <div class="item-price">19 €</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Pulpo a la parrilla</div>
+                        <div class="item-price">22 €</div>
+                    </div>
+                </section>
+
+                <section class="section-box">
+                    <h2 class="section-title">Carnes</h2>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <div class="item-name">Lomo de cebón madurado</div>
+                            <div class="item-desc">Con nuestra salsa brava</div>
+                        </div>
+                        <div class="item-price">26 €</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Secreto de cerdo a la brasa</div>
+                        <div class="item-price">15 €</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Costillas de vaca baja temperatura</div>
+                        <div class="item-price">25 €</div>
+                    </div>
+                </section>
+
+                <section class="section-box">
+                    <h2 class="section-title">Huevos Rotos</h2>
+                    <div class="menu-item">
+                        <div class="item-name">Con jamón ibérico</div>
+                        <div class="item-price">13 €</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Con torreznos, chistorra y morcilla</div>
+                        <div class="item-price">13 €</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Revuelto de boletus y setas</div>
+                        <div class="item-price">12 €</div>
+                    </div>
+                </section>
+
+                <section class="section-box">
+                    <h2 class="section-title">De Cuchara</h2>
+                    <div class="menu-item">
+                        <div class="item-name">Fabada al estilo Carmen</div>
+                        <div class="item-price">11 €</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Arroz a la marinera (min. 2 pers)</div>
+                        <div class="item-price">14 €/p</div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>Ración de pan — 0,40 €/persona</p>
+            <p>C/ de Fco. Largo Caballero, 20, 28100 Alcobendas | <b>91 628 71 09</b></p>
+            <p>Instagram: <b>@iriagastrobar</b></p>
+        </footer>
+    </div>
+
+</body>
+</html>
